@@ -1,0 +1,68 @@
+<!-- index.wxml -->
+<!-- 顶部滑动模块 -->
+<view>
+  <swiper class="haibao"
+  indicator-dots="true"
+  indicator-color="rgba(233,233,233,0.9)"
+  indicator-active-color="#f4f5f5"
+   autoplay="true" 
+   interval="8000"
+   duration="2000" 
+   circular="true" 
+   >
+ <block class="swiper-image" wx:for="{{imgurls}}" wx:key="key">
+    <swiper-item>
+    <image src="{{item}}"  style ="width:100% "   ></image>
+    </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 最新通知 -->
+<l-notice-bar show="{{true}}" 
+              type="swip" 
+              speed="2000"
+              front-icon-name="notification" swip-arr="{{dataList}}" >
+</l-notice-bar>
+<!-- 新闻资讯 -->
+<view class="pubTitle">
+      <view class="txt">新闻动态</view>
+      <navigator url="{{myUrl}}" class="more" open-type="reLaunch">更多></navigator>
+    </view>
+<view class="dynamic">
+  <view class="container"></view>
+    <view class="dyMain">
+      <navigator class="dyItem"  wx:for="{{3}}" wx:key="index">
+        <view class="pic">
+          <image src="/images/xszp1.jpg"></image>
+        </view>
+        <view class="txt">
+          <view class="title">标题站位标题占位标题站位标题占位标题站位标题占位</view>
+          <view class="info"><text>作者：</text>***<text space="ensp">    -    </text> <text>时间：</text>*****</view>
+        </view>
+      </navigator>
+    </view>
+</view>
+ <!-- 党务公开模块  -->
+ <view class="pubTitle">
+      <view class="txt">党务公开</view>
+      <navigator url="{{myUrl}}" class="more" open-type="reLaunch">更多></navigator>
+    </view>
+<view class="dynamic">
+  <view class="container"></view>
+    <view class="dyMain">
+      <navigator class="dyItem"  wx:for="{{3}}" wx:key="index">
+        <view class="pic">
+          <image src="/images/xszp1.jpg"></image>
+        </view>
+        <view class="txt">
+          <view class="title">标题站位标题占位标题站位标题占位标题站位标题占位</view>
+          <view class="info"><text>作者：</text>***<text space="ensp">    -    </text> <text>时间：</text>*****</view>
+        </view>
+      </navigator>
+    </view>
+</view>
+
+ 
+
+ 
